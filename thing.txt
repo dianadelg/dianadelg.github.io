@@ -1,1 +1,7 @@
 idk if I like this layout, parallax is cleaner
+
+
+merge typing code into the about me part (I'm ....)
+and then below, explain who you are
+
+Delete master code once this is done and do pull request so parallax --> master
