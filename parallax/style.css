@@ -18,12 +18,12 @@ body, html {
   min-height: 70%;
 }
 .parallax2 {
-  background: url(img/diana2.jpg);
-  min-height: 60%;
+  background: url(img/diana3.jpeg);
+  min-height: 30%;
 }
 .parallax3 {
-  background: url(img/diana3.jpeg);
-  min-height: 40%;
+  background: url(img/diana2.jpg);
+  min-height: 30%;
 }
 .parallax4 {
   background: url(img/diana4.jpg);
@@ -141,6 +141,11 @@ body {
 
     font-weight: bold;
     color: #5F91AC;
+}
+
+.small-header {
+  font-family: 'Courier New';
+  font-size: 3rem;
 }
 
 .cursor {
