@@ -6,7 +6,7 @@ Not super crazy about color scheme but I also do not have any other pics of myse
     if you choose to change, use unsplash
 
 
-messing around with a parallax website. Need to add typing text still in first bubble, about me, skills, experience, (basically break down resume.)
+messing around with a parallax website. Need to add skills, experience, (basically break down resume.)
 
 
 Also maybe see if there is a way to do sidebar and if you click, it navs to that part of the page? (ex: skills, exp, about me and when user clicks, it brings them there)
