@@ -10,3 +10,5 @@ messing around with a parallax website. Need to add skills, experience, (basical
 
 
 Also maybe see if there is a way to do sidebar and if you click, it navs to that part of the page? (ex: skills, exp, about me and when user clicks, it brings them there)
+
+Look at board ideas -- split box into two colors, change overall fonts to a Google one
