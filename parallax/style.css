@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 /*@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
 this ^^ is how you import google fonts
+
 */
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC&display=swap');
 @import url('https://fonts.googleapis.com/css?family-Montserrat');
+
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap');
+
 
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Pontano Sans', sans-serif;
   line-height: 180%;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   text-align: center;
 }
 .parallax1 {
@@ -19,15 +25,15 @@ body, html {
 }
 .parallax2 {
   background: url(img/diana3.jpeg);
-  min-height: 30%;
+  min-height: 35%;
 }
 .parallax3 {
   background: url(img/diana2.jpg);
-  min-height: 30%;
+  min-height: 35%;
 }
 .parallax4 {
-  background: url(img/diana4.jpg);
-  min-height: 30%;
+  background: url(img/hey.jpg);
+  min-height: 50%;
 }
 .parallax1, .parallax2, .parallax3, .parallax4 {
   position: relative;
@@ -62,16 +68,18 @@ section {
   overflow: auto;
   padding: 50px 80px;
 }
+
+/* title is misleading, it's actually bright now ahaha -- white boxes filled with text*/
 .dark {
   overflow: auto;
-  padding: 50px 80px;
-  background-color: black;
-  color: white;
+  /*padding: 50px 80px;*/
+  background-color: white;
+  color: black;
 }
 
-diana {
-  padding-left: 100px;
-  padding-right: 100px;
+
+.diana {
+  font-size: 20px;
 }
 
 .wordemp {
@@ -107,25 +115,19 @@ diana {
 }
 
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: black;
-    color: white;
-}
 
 .container {
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Courier New';
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .container p{
@@ -202,7 +204,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: white;
+    background-color: darkgrey;
     text-align: center;
     transition: 0.5s;
     transform: translate(0,0px);
