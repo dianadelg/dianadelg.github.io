@@ -6,6 +6,7 @@ messing around with a parallax website. Need to add skills, experience, (basical
 
 Also maybe see if there is a way to do sidebar and if you click, it navs to that part of the page? (ex: skills, exp, about me and when user clicks, it brings them there)
 
+QUESTION: should I add a link (little button boi) to my resume as well? (NOTE: UPDATE RESUME, it's ugly; add personal logo)
 
 
 
