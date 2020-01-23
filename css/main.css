@@ -20,7 +20,7 @@ body, html {
   text-align: center;
 }
 .parallax1 {
-  background: url(diana1.jpg);
+  background: url("diana1.jpg");
   min-height: 70%;
 }
 .parallax2 {
