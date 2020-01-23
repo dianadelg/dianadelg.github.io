@@ -1,1 +1,99 @@
-Testing
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Word</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="parallax1">
+    <div class="heading">
+      
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <p>Hello world, I'm <span class ="typed-text"></span><span class ="cursor typing">&nbsp;</span></p>
+      <script src = "main.js"></script>
+
+  </div>
+
+
+    
+    <div class="diana">
+      <p>I am a current senior at Rutgers University - New Brunswick majoring in  <span class = "wordemp">computer science</span>  and minoring in  <span class = "wordemp">  psychology </span>through the School of Arts and Sciences Honors Program. 
+        My goal is to work towards making innovative and efficient changes in the tech industry, while integrating properties of psychology; essentially, I want
+        to <span class = "wordemp">make the tech world more humanistic</span> and <span class = "wordemp">ease the human world into a more technical one.</span> Merging these two fields is my passion, and I believe this can successfully be done through
+        a deep understanding of both seemingly opposite disciplines. 
+      </p>
+  
+    </div>
+  <br>  
+
+  <div class="social-menu">
+    <br>
+    <br>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/diana-del-gaudio/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/dianadelg "target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://www.instagram.com/diaanaamariee/?hl=en"target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/diana.delgaudio347"target="_blank"><i class="fa fa-facebook"></i></a></li>
+      
+    </ul>
+    <br>
+    <br>
+
+  </div>
+
+  
+  
+  </section>
+
+  <div class="parallax2">
+    <div class="heading-sm">
+     
+    </div>
+  </div>
+<!--MAKE THE SKILLS TYPING -- will have to add this again-->
+  <section class="dark">
+    <span class ="typed-text small-header">Skills</span>
+    <br>
+    <br>
+    <div class="diana">Parallax also affects optical instruments such as rifle scopes, binoculars, microscopes, and twin-lens reflex cameras that view objects from slightly different angles. Many animals, including humans, have two eyes with overlapping visual fields that use parallax to gain depth perception; this process is known as stereopsis. In computer vision the effect is used for computer stereo vision, and there is a device called a parallax rangefinder that uses it to find range, and in some variations also altitude to a target.</div>
+  </section>
+
+  <div class="parallax3">
+  </div>
+
+  <div class="dark">
+    <section class="dark">
+      <span class ="typed-text small-header">Experience</span>
+      <br>
+      <br>
+      <div class="diana">Parallax also affects optical instruments such as rifle scopes, binoculars, microscopes, and twin-lens reflex cameras that view objects from slightly different angles. Many animals, including humans, have two eyes with overlapping visual fields that use parallax to gain depth perception; this process is known as stereopsis. In computer vision the effect is used for computer stereo vision, and there is a device called a parallax rangefinder that uses it to find range, and in some variations also altitude to a target.</div>
+    </section>
+  </div>
+
+  <div class="parallax4">
+  </div>
+
+  <div class="dark">
+    <section class="dark">
+      <span class ="typed-text small-header"></span>
+    
+      <div class="diana">
+        <p>I am actively involved in <span class = "wordemp">Women In Computer Science (WiCS)</span> at Rutgers, am an advisee through <span class = "wordemp">#BUILTBYGIRLS</span> and am a writer, peer mentor, and campus trendsetter through the national and Rutgers chapters of <span class = "wordemp">Her Campus</span>. 
+          I'm also a member of the <span class = "wordemp">Psi Chi</span>, the national psychology honor society, and <span class = "wordemp">Google's Women Techmakers</span>. In my spare time, I'm either scrolling endlessly through Pinterest or watching super cheesy romance movies. </p></div>
+    </section>
+  </div>
+
+
+ 
+
+
+</body>
+</html>
