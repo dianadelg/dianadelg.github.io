@@ -16,7 +16,7 @@ body, html {
   font-family: 'Pontano Sans', sans-serif;
   line-height: 180%;
   color: black;
-  background-color: white;
+  background-color: #AFA2B6;
   text-align: center;
 }
 .parallax1 {
@@ -73,7 +73,7 @@ section {
 .dark {
   overflow: auto;
   /*padding: 50px 80px;*/
-  background-color: #DBDAEB;
+  background-color: #AFA2B6;
   color: black;
 }
 
@@ -83,7 +83,7 @@ section {
 }
 
 .wordemp {
-  color: #B0778A;
+  color: white;
   /*font-family: 'Gloria Hallelujah';
   font-size: 30px;*/
   font-size: 25px;
@@ -142,7 +142,7 @@ section {
 .typed-text {
 
     font-weight: bold;
-    color: #5F91AC;
+    color: white;
 }
 
 .small-header {
@@ -204,7 +204,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: darkgrey;
+    background-color: rgb(252, 252, 252);
     text-align: center;
     transition: 0.5s;
     transform: translate(0,0px);
