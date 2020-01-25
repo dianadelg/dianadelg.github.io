@@ -4,7 +4,7 @@ this ^^ is how you import google fonts
 
 */
 @import url('https://fonts.googleapis.com/css?family=Spectral+SC&display=swap');
-@import url('https://fonts.googleapis.com/css?family-Montserrat');
+/*@import url('https://fonts.googleapis.com/css?family-Montserrat');*/
 
 @import url('https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap');
 
@@ -73,7 +73,7 @@ section {
 .dark {
   overflow: auto;
   /*padding: 50px 80px;*/
-  background-color: white;
+  background-color: #DBDAEB;
   color: black;
 }
 
