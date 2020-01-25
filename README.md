@@ -1,5 +1,7 @@
 # dianadelg.github.io
 
+NEW: need to fix experience, typing layout on mobile (why aren't tiles working on chrome?)
+
 We are out here looking prettier!
 
 messing around with a parallax website. Need to add skills, experience, (basically break down resume.)
