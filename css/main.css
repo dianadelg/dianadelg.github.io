@@ -7,6 +7,7 @@ this ^^ is how you import google fonts
 /*@import url('https://fonts.googleapis.com/css?family-Montserrat');*/
 
 @import url('https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 
 body, html {
@@ -15,34 +16,64 @@ body, html {
   /*font-family: 'Ubuntu', sans-serif;*/
   font-family: 'Pontano Sans', sans-serif;
   line-height: 180%;
-  color: black;
-  background-color: #AFA2B6;
+  color: #CC9692;
+  background-color: black;
   text-align: center;
 }
+
+.row {
+  display: flex;
+}
+
+.column1 {
+  flex: 30%;
+}
+
+.column2 {
+  flex: 70%;
+}
+
+.circle {
+  max-height: 50%;
+  max-width: 50%;
+}
+
 .parallax1 {
-  background: url("diana1.jpg");
-  min-height: 70%;
+  background: url("dd2.png");
+ 
+  min-height: 80%;
 }
+
 .parallax2 {
-  background: url("diana3.jpeg");
-  min-height: 35%;
+  background: url("background.jpg");
+  min-height: 30%;
 }
-.parallax3 {
-  background: url("diana2.jpg");
-  min-height: 35%;
+
+.aboutme {
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  size: 32px;
 }
-.parallax4 {
-  background: url("hey.jpg");
-  min-height: 50%;
-}
-.parallax1, .parallax2, .parallax3, .parallax4 {
+
+.parallax1{
   position: relative;
-  opacity: .75;
+  opacity: .80;
   background-position: center;
-  background-size: cover;
+  
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.parallax2{
+  position: relative;
+  opacity: .80;
+  background-position: center;
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 .heading {
   position: absolute;
   color: #fff;
@@ -66,36 +97,24 @@ body, html {
 
 section {
   overflow: auto;
-  padding: 50px 80px;
+  padding: 40px 80px;
 }
 
 /* title is misleading, it's actually bright now ahaha -- white boxes filled with text*/
 .dark {
   overflow: auto;
   /*padding: 50px 80px;*/
-  color: black;
+  color: white;
 }
 
 
 .diana {
   font-size: 20px;
+  color: #CC9692;
 }
 
-.wordemp {
-  color: white;
-  /*font-family: 'Gloria Hallelujah';
-  font-size: 30px;*/
-  font-size: 25px;
-}
 
-.wordemp2 {
-  color: white;
-  /*font-family: 'Gloria Hallelujah';
-  font-size: 30px;*/
-  padding: 5px;
-  font-size: 15px;
 
-}
 
 .emp {
   color: black;
@@ -151,28 +170,7 @@ section {
   font-size: 3rem;
 }
 
-.cursor {
-    display: inline-block;
-    width: 3px;
-    background-color: black;
-    margin-left: 0.1rem;
-    animation: blink 1s infinite;
-}
 
-.cursor.typing {
-    animation: none;
-}
-
-@keyframes blink{
-    0% {background-color: black;}
-    49% {background-color: black;}
-    50% {background-color: transparent;}
-    99% {background-color: transparent;}
-    100% {
-        background-color: black;
-    }
-
-}
 
 h1 {
   text-align: center;
@@ -191,13 +189,13 @@ h1 {
     margin: 0 10px;
 }
 .social-menu ul li .fa {
-    color: #000000;
+    color: white;
     font-size: 25px;
     line-height: 50px;
     transition: .5s;
 }
 .social-menu ul li .fa:hover {
-    color:white;
+    color:black;
 }
 .social-menu ul li a {
     position: relative;
@@ -205,103 +203,24 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgb(252, 252, 252);
+    background-color: black;
     text-align: center;
-    transition: 0.5s;
-    transform: translate(0,0px);
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+   
+ 
 }
-.social-menu ul li a:hover {
-    transform: rotate(0deg) skew(0deg) translate(0, -10px);
-}
+
 .social-menu ul li:nth-child(1) a:hover {
-    background-color: #3b5999;
+    background-color: #CC9692;
 }
 .social-menu ul li:nth-child(2) a:hover {
-    background-color: pink;
+    background-color: #CC9692;
 }
 .social-menu ul li:nth-child(3) a:hover {
-    background-color: #73D4DA;
+    background-color: #CC9692;
 }
 .social-menu ul li:nth-child(4) a:hover {
-    background-color: #AF497B;
+    background-color: #CC9692;
 }
 .social-menu ul li:nth-child(5) a:hover {
-    background-color: #73D4DA;
+    background-color: #CC9692;
 }
-
-
-/* Experience tiles */
-
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/*These are the actual flip-cards*/
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #874862;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
