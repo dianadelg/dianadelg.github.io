@@ -55,16 +55,7 @@ body, html {
   size: 32px;
 }
 
-.parallax1{
-  position: relative;
-  opacity: .80;
-  background-position: center;
-  
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.parallax2{
+.parallax1, .parallax2{
   position: relative;
   opacity: .80;
   background-position: center;
