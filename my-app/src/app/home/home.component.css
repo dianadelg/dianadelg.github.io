@@ -1,0 +1,107 @@
+.body {
+    background-color: rgb(250,250,250,0.93);
+    font-family: nimbus-sans,sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #121212;
+    /*margin-left: 100px;
+    margin-right: 90px;*/
+    font-size: 30px;
+}
+
+.innerContent{
+   margin-left: 100px;
+   margin-right: 90px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/*Line on left of text*/
+.leftBorder{
+  border-left-width:5px;
+  border-left-color: black;
+  border-left-style: solid;
+  padding-left: 20px;
+}
+
+
+/*social media icons*/
+.fab,
+.fa {
+  color:darkgray;
+  padding-right: 70px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover, .fab:hover{
+  color: #1b1b1b;
+}
+
+/* Get the icons to change color on hover
+nav ul li a:hover{
+  background: none;
+  color: #1b1b1b;
+} */
+
+/*Title of text*/
+.title{
+  font-family: nimbus-sans, sans-serif;
+  font-size: 85px;
+  font-weight: 700;
+}
+
+/*Text information*/
+.alignRight {
+  text-align: left!important;
+  padding-left: 10px;
+  padding-right: 50px;
+}
+
+/*Half highlight on text*/
+
+.half-highlight {
+ 
+  background-image: linear-gradient(to right, transparent 50%, #ffb6d3 50%);
+  background-origin: 0;
+  background-size: 200% 50%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  transition: background-position 0.5s;
+  background-position: -100% 100%;
+  font-weight: 600;
+}
+
+/*media queries*/
+@media screen and (max-width: 1000px) {
+  /*we will make a ton of changes to this later
+    - remove big margin
+    - scale font size?
+    - make img appear below inbetween paragraph and icons
+    - fix icon appearance (going on different lines -- might get fixed with margin issue)
+  */
+    .myImg {display:none;}
+
+}
+/*For the image of me*/
+.responsive {
+  max-width: 85%;
+  height: auto;
+  align-content: center!important;
+  align-items: center!important;
+   margin-top: auto!important;
+    margin-left: auto!important; 
+    /* margin-right: auto!important;  */
+    margin-bottom: auto!important;
+    display: block!important;
+}
+
+.bar{
+  background-color: lightgray;
+  margin: 0px!important;
+}
+
