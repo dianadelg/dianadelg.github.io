@@ -11,7 +11,9 @@
 
 .dates{
     font-size: 12px;
-    font-family: nimbus-sans;
+    padding-bottom: 5px;
+    font-family: nimbus-sans,sans-serif;
+    font-weight: 500;
 }
 
 .employer{
@@ -21,15 +23,6 @@
 .innerContent{
    margin-left: 100px;
    margin-right: 90px;
-}
-
-.bubble{
-    background-color: #121212;
-    color:lightgray;
-    border-radius: 25px;
-    padding: 2px 12px 2px 12px;
-    font-size: 12px;
-    font-family: nimbus-sans;
 }
 
 nav{
@@ -56,12 +49,18 @@ nav{
 
 /*Line on left of text*/
 .leftBorder{
-  border-left-width:3px;
+  border-left-width:2px;
   border-left-color: black;
   border-left-style: solid;
   padding-left: 20px;
 }
 
+:host ::ng-deep .mat-chip-list-wrapper mat-chip {
+  
+  font-size: 10px;
+  color: #121212;
+  background-color: lightgray;
+}
 
 /*social media icons*/
 .fab,
@@ -89,13 +88,13 @@ nav{
 
 .job-title{
     font-family: nimbus-sans, sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     
   }
 
   .job-description{
-    font-family: nimbus-sans, sans-serif;
+    
     font-size: 17px;
     text-align: left;
     padding-bottom: 60px;
