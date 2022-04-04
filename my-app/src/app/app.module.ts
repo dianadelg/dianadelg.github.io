@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {MatChipsModule} from '@angular/material/chips';
     BrowserAnimationsModule,
     MatToolbarModule,
     AppRoutingModule,
-    MatChipsModule
+    MatChipsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
