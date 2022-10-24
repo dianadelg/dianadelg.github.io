@@ -34,7 +34,7 @@ class ExperienceComponent {
     }
 }
 ExperienceComponent.ɵfac = function ExperienceComponent_Factory(t) { return new (t || ExperienceComponent)(); };
-ExperienceComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ExperienceComponent, selectors: [["app-experience"]], decls: 103, vars: 0, consts: [["rel", "stylesheet", "href", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtrustConstantResourceUrl"]("https://use.typekit.net/lrc3vfy.css")], ["rel", "stylesheet", "href", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtrustConstantResourceUrl"]("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")], [1, "innerContent", 2, "padding-top", "30px"], [1, "container-fluid"], [1, "row"], [1, "col-sm", "title"], [1, "col-sm-4"], [1, "half-highlight", "job-title"], [1, "dates"], [1, "employer"], [1, "col-sm-8", "job-description", "leftBorder"]], template: function ExperienceComponent_Template(rf, ctx) { if (rf & 1) {
+ExperienceComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ExperienceComponent, selectors: [["app-experience"]], decls: 104, vars: 0, consts: [["rel", "stylesheet", "href", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtrustConstantResourceUrl"]("https://use.typekit.net/lrc3vfy.css")], ["rel", "stylesheet", "href", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtrustConstantResourceUrl"]("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")], [1, "innerContent", 2, "padding-top", "30px"], [1, "container-fluid"], [1, "row"], [1, "col-sm", "title"], [1, "col-sm-4"], [1, "half-highlight", "job-title"], [1, "dates"], [1, "employer"], [1, "col-sm-8", "job-description", "leftBorder"], [1, "row", 2, "padding-bottom", "30px"]], template: function ExperienceComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "head");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "link", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "link", 1);
@@ -55,7 +55,7 @@ ExperienceComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "span", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "ADP");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " | Roseland, NJ | AUG 2020 - PRESENT ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " | Roseland, NJ | AUG 2020 - JUNE 2022 ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-chip-list");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-chip");
@@ -97,7 +97,7 @@ ExperienceComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "mat-chip-list");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "mat-chip");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "WEB DEV");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "WEBDEV");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "mat-chip");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "FRONT END");
@@ -195,6 +195,7 @@ ExperienceComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](103, "div", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -299,7 +300,7 @@ class HomeComponent {
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 18, vars: 0, consts: [[1, "body"], [1, "innerContent", 2, "padding-top", "30px"], [1, "container-fluid"], [1, "row"], [1, "col-sm"], [1, "title", 2, "padding-top", "50px"], [1, "leftBorder"], [1, "half-highlight"], [2, "padding-top", "30px"], ["href", "https://www.linkedin.com/in/diana-del-gaudio/", 1, "fab", "fa-linkedin-in"], ["href", "https://github.com/dianadelg", 1, "fab", "fa-github"], ["href", "mailto: ddelgaudio347@gmail.com", 1, "fa", "fa-envelope"], [1, "col-sm", "hidden-lg", "hidden-md", "hidden-sm", "hidden-xs", "myImg"], ["src", "/assets/images/me_icon.png", "alt", "me!", 1, "responsive"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 19, vars: 0, consts: [[1, "body"], [1, "innerContent", 2, "padding-top", "30px"], [1, "container-fluid"], [1, "row"], [1, "col-sm"], [1, "title", 2, "padding-top", "50px"], [1, "leftBorder"], [1, "half-highlight"], [2, "padding-top", "30px"], ["href", "https://www.linkedin.com/in/diana-del-gaudio/", 1, "fab", "fa-linkedin-in"], ["href", "https://github.com/dianadelg", 1, "fab", "fa-github"], ["href", "mailto: ddelgaudio347@gmail.com", 1, "fa", "fa-envelope"], [1, "col-sm", "hidden-lg", "hidden-md", "hidden-sm", "hidden-xs", "myImg"], ["src", "/assets/images/me_icon.png", "alt", "me!", 1, "responsive"], [1, "row", 2, "padding-bottom", "30px"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -325,6 +326,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "img", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "div", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
