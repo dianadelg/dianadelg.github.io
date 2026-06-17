@@ -675,7 +675,7 @@
       <div style="background:white; border:1px solid var(--border); border-radius:16px; padding:1.5rem; margin-bottom:1.5rem;">
         <div style="font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:1rem;">Education</div>
         <div style="font-weight:500; color:var(--ink);">B.S. Computer Science</div>
-        <div style="font-size:0.875rem; color:var(--ink-muted);">Rutgers University · GPA 3.58</div>
+        <div style="font-size:0.875rem; color:var(--ink-muted);">Rutgers University · GPA 3.58 · Minor in Psychology</div>
         <div style="font-size:0.8rem; color:var(--ink-faint); margin-top:0.25rem;">Graduated May 2020 · New Brunswick, NJ</div>
       </div>
 
@@ -703,28 +703,28 @@
 
   <div class="blog-grid">
     <!-- Sample post 1 -->
-    <div class="blog-card" onclick="openPost('post1')">
+    <!-- <div class="blog-card" onclick="openPost('post1')">
       <span class="blog-tag tag-tech">Tech</span>
       <h3>What nobody tells you about API design until you've broken prod</h3>
       <p>Hard-won lessons from building enterprise APIs at scale — the decisions that seem fine until they're suddenly everyone's problem at 2am.</p>
       <div class="blog-card-meta">June 2025 · 6 min read</div>
-    </div>
+    </div> -->
 
     <!-- Sample post 2 -->
     <div class="blog-card" onclick="openPost('post2')">
       <span class="blog-tag tag-mental">Mental health</span>
-      <h3>Burnout doesn't announce itself — a software engineer's honest reflection</h3>
-      <p>I didn't realize I was burning out until I was already on the other side of it. Here's what I wish I'd noticed sooner.</p>
-      <div class="blog-card-meta">March 2025 · 8 min read</div>
+      <h3>When your brain won't let you ship: OCD and SWE</h3>
+      <p>My compulsions followed me into my career. Here's what that actually looked like and what helped.</p>
+      <div class="blog-card-meta">June 2026 · 5 min read</div>
     </div>
 
     <!-- Sample post 3 -->
-    <div class="blog-card" onclick="openPost('post3')">
+    <!-- <div class="blog-card" onclick="openPost('post3')">
       <span class="blog-tag tag-career">Career</span>
       <h3>Going from intern to senior engineer — the parts that actually mattered</h3>
       <p>A candid look at the 5 years between "funded prototype" and "federal senior engineer" — and what actually moved the needle.</p>
       <div class="blog-card-meta">Jan 2025 · 7 min read</div>
-    </div>
+    </div> -->
 
     <!-- Placeholder for new posts -->
     <div class="blog-placeholder">
@@ -797,18 +797,26 @@ const POSTS = {
   },
   post2: {
     tag: '<span class="blog-tag tag-mental">Mental health</span>',
-    title: "Burnout doesn't announce itself — a software engineer's honest reflection",
-    meta: "March 2025 · 8 min read",
+    title: "When your brain won't let you ship: OCD and software engineering",
+    meta: "June 2026 · 5 min read",
     body: `
-      <p>I used to think burnout looked like not wanting to work. Like one day you wake up and everything feels impossible. That's not how it happened for me.</p>
-      <h2>What it actually looked like</h2>
-      <p>For me, burnout looked like working more. It looked like staying later to "catch up," like feeling guilty on weekends, like measuring my worth in Jira tickets closed. It looked productive from the outside. On the inside, I was running on fumes and telling myself it was dedication.</p>
-      <h2>The thing nobody says</h2>
-      <p>In tech, we fetishize output. We celebrate the people who "grind." We don't have great language for "I am exhausted in a way that sleep doesn't fix." And we definitely don't have great language for saying that out loud in a standup.</p>
-      <p>What helped me was naming it — out loud, to someone I trusted. Not to fix it, just to say: this is where I am. Something shifted when I stopped pretending the fog wasn't there.</p>
-      <h2>What recovery actually looked like</h2>
-      <p>Slower than I wanted. More boring than I expected. It was going on walks without my phone. Cooking dinner without a podcast. Setting a hard stop at the end of the workday and actually stopping. It felt unproductive. It was probably the most important work I did that year.</p>
-      <p>You don't have to earn rest. That's the whole thing.</p>
+      <p>My compulsions stem from an innate need to feel perfect. To get things <em>just right.</em> That part of OCD that is impossible to satisfy: the chasing of certainty, the perfectionism that has no finish line. It followed me into my software engineering career, and at some point, it felt like a switch was flipped.</p>
+
+      <h2>Before</h2>
+      <p>I used to write code and check it once. I felt confident in what I shipped. I could speak to what I'd written with ease. And then one day, that felt impossible.</p>
+
+      <h2>The spiral</h2>
+      <p>My fingers would hover over the keys and I'd question everything. What I was typing, why I was typing it, whether the letters made sense, whether my understanding was actually correct. I convinced myself I was illiterate. Uneducated. Useless. When I'd finally write something, it felt wrong, and so I'd check outputs for hours. Burn the midnight oil by triple-checking everything was as intended, if I could even convince myself of what that was.</p>
+      <p>A senior developer is supposed to do these things with ease. A person is not supposed to second guess everything that was once so automatic. And I was failing what felt like the most basic of tasks, as both a developer and a human being.</p>
+
+      <h2>What I learned</h2>
+      <p>This is not normal. Suffering like this is not normal, and I shouldn't have had to white-knuckle through that uncertainty, ruminating and wracking my brain for evidence of certainty for hours, while convincing myself everything was fine.</p>
+      <p>OCD does a great job at making you feel like something is so fundamentally wrong with you that "normal" isn't viable, that things will always be this way. They don't have to be. Help exists for this. Working with a therapist and engaging in ERP, allowing these thoughts, no matter how debilitating, to pass through rather than compulsively neutralizing them, made the difference for me.</p>
+
+      <h2>Where I'm at now</h2>
+      <p>I'm not 100%. There are still days I fall into that spiral, into the trap my brain produces. But it's easier to tolerate. And it's easier to forgive myself. That's not nothing. That's everything.</p>
+
+      <p>If any of this sounds familiar: you're not broken, you're not useless, and you don't have to figure this out alone.</p>
     `
   },
   post3: {
