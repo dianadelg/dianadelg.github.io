@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Diana Del Gaudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F4;
+    --ink: #1A1917;
+    --ink-muted: #5C5A55;
+    --ink-faint: #B0ADA6;
+    --accent: #D4527C;
+    --accent-soft: #FBEAF0;
+    --pink-deep: #7B1F3A;
+    --pink-deep-soft: #F2D0D8;
+    --pink-light: #E8789C;
+    --pink-light-soft: #FEF0F5;
+    --plum: #6B3FA0;
+    --plum-soft: #F0EAF8;
+    --border: rgba(26,25,23,0.1);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(250,248,244,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a.active { color: var(--accent); }
+
+  /* PAGE HEADER */
+  .page-header {
+    padding: 9rem 2.5rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-header .section-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .page-header h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+  .page-header h1 em { font-style: italic; color: var(--accent); }
+  .page-header p {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+  }
+
+  /* CONTROLS */
+  .controls {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+    max-width: 340px;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px; height: 16px;
+    stroke: var(--ink-faint);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    pointer-events: none;
+  }
+  .search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.4rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: white;
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input::placeholder { color: var(--ink-faint); }
+  .search-input:focus { border-color: rgba(26,25,23,0.3); }
+
+  .filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .pill {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--ink-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: var(--sans);
+  }
+  .pill:hover { border-color: rgba(26,25,23,0.25); color: var(--ink); }
+  .pill.active-all { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .pill.active-tech { background: #F8EEFF; color: #8B30C8; border-color: rgba(139,48,200,0.25); }
+  .pill.active-mental { background: #FDF0F5; color: #E8789C; border-color: rgba(232,120,156,0.25); }
+  .pill.active-career { background: #FFE8E8; color: #C0304A; border-color: rgba(192,48,74,0.25); }
+  .pill.active-education { background: #FFE8F0; color: #CC2060; border-color: rgba(204,32,96,0.25); }
+
+  .post-count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  /* POSTS LAYOUT */
+  .posts-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 780px;
+  }
+
+  /* POST CARD */
+  .post-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .post-card:hover { border-color: rgba(26,25,23,0.22); transform: translateY(-2px); }
+  .post-card.open { border-color: rgba(26,25,23,0.2); transform: none; }
+  .post-card-header {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .post-card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .blog-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    display: inline-block;
+  }
+  .tag-tech { background: #F8EEFF; color: #8B30C8; }
+  .tag-mental { background: #FDF0F5; color: #E8789C; }
+  .tag-career { background: #FFE8E8; color: #C0304A; }
+  .tag-education { background: #FFE8F0; color: #CC2060; }
+  .expand-icon {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.15s, transform 0.25s;
+    color: var(--ink-faint);
+  }
+  .post-card.open .expand-icon { background: var(--ink); color: var(--cream); transform: rotate(45deg); border-color: var(--ink); }
+  .expand-icon svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+  .post-card h2 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .post-card-preview {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+  .post-card-meta { font-size: 0.75rem; color: var(--ink-faint); }
+
+  /* POST BODY (expandable) */
+  .post-body-wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .post-card.open .post-body-wrap {
+    max-height: 2000px;
+  }
+  .post-body {
+    padding: 0 1.75rem 1.75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+  .post-body p {
+    font-size: 0.975rem;
+    color: var(--ink-muted);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-body h2 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin: 1.75rem 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* VIDEO EMBED */
+  .post-video {
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
+  }
+  .post-video iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .post-video-caption {
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* EMPTY STATE */
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--ink-faint);
+  }
+  .empty-state .empty-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+  .empty-state p { font-size: 0.9rem; line-height: 1.7; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--border);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.25rem; }
+    .page-header { padding: 7rem 1.25rem 2rem; }
+    .controls { padding: 1.5rem 1.25rem; }
+    .posts-layout { padding: 2rem 1.25rem 4rem; }
+    .search-wrap { max-width: 100%; }
+    .post-count { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Diana ✦</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#resume">Resume</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="section-label">Writing</div>
+  <h1>Things I <em>think about.</em></h1>
+  <p>Software, career, and the mental health stuff nobody talks about enough. I write when something feels worth saying.</p>
+</div>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" class="search-input" id="search-input" placeholder="Search posts…" autocomplete="off">
+  </div>
+
+  <div class="filter-pills">
+    <button class="pill active-all" data-filter="all">All</button>
+    <button class="pill" data-filter="tech">Tech</button>
+    <button class="pill" data-filter="mental">Mental health</button>
+    <button class="pill" data-filter="career">Career</button>
+    <button class="pill" data-filter="education">Education</button>
+  </div>
+
+  <span class="post-count" id="post-count"></span>
+</div>
+
+<div class="posts-layout" id="posts-layout">
+  <!-- injected by JS -->
+</div>
+
+<footer>
+  Made with care by Diana Del Gaudio · 2025 · <a href="index.html" style="color:var(--accent); text-decoration:none;">← Back home</a>
+</footer>
+
+<script>
+const POSTS = [
+  {
+    id: 'post2',
+    tag: 'mental',
+    tagLabel: 'Mental health',
+    date: 'June 2026',
+    readTime: '5 min read',
+    title: 'When your brain won\'t let you ship: OCD and software engineering',
+    preview: 'My compulsions followed me into my career. Here\'s what that actually looked like and what helped.',
+    body: `
+      <p>My compulsions stem from an innate need to feel perfect. To get things <em>just right.</em> That part of OCD that is impossible to satisfy: the chasing of certainty, the perfectionism that has no finish line. It followed me into my software engineering career, and at some point, it felt like a switch was flipped.</p>
+      <h2>Before</h2>
+      <p>I used to write code and check it once. I felt confident in what I shipped. I could speak to what I'd written with ease. And then one day, that felt impossible.</p>
+      <h2>The spiral</h2>
+      <p>My fingers would hover over the keys and I'd question everything. What I was typing, why I was typing it, whether the letters made sense, whether my understanding was actually correct. I convinced myself I was illiterate. Uneducated. Useless. When I'd finally write something, it felt wrong, and so I'd check outputs for hours. Burn the midnight oil by triple-checking everything was as intended, if I could even convince myself of what that was.</p>
+      <p>A senior developer is supposed to do these things with ease. A person is not supposed to second guess everything that was once so automatic. And I was failing what felt like the most basic of tasks, as both a developer and a human being.</p>
+      <h2>What I learned</h2>
+      <p>This is not normal. Suffering like this is not normal, and I shouldn't have had to white-knuckle through that uncertainty, ruminating and wracking my brain for evidence of certainty for hours, while convincing myself everything was fine.</p>
+      <p>OCD does a great job at making you feel like something is so fundamentally wrong with you that "normal" isn't viable, that things will always be this way. They don't have to be. Help exists for this. Working with a therapist and engaging in ERP, allowing these thoughts, no matter how debilitating, to pass through rather than compulsively neutralizing them, made the difference for me.</p>
+      <h2>Where I'm at now</h2>
+      <p>I'm not 100%. There are still days I fall into that spiral, into the trap my brain produces. But it's easier to tolerate. And it's easier to forgive myself. That's not nothing. That's everything.</p>
+      <p>If any of this sounds familiar: you're not broken, you're not useless, and you don't have to figure this out alone.</p>
+    `
+  },
+  {
+    id: 'post1',
+    tag: 'tech',
+    tagLabel: 'Tech',
+    date: 'June 2025',
+    readTime: '6 min read',
+    video: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoCaption: 'A short video companion to this post.',
+    title: 'What nobody tells you about API design until you\'ve broken prod',
+    preview: 'Hard-won lessons from building enterprise APIs at scale — the decisions that seem fine until they\'re suddenly everyone\'s problem at 2am.',
+    body: `
+      <p>I've built a lot of APIs. Some are quietly humming along in federal systems right now. Some taught me very expensive lessons. Here's the distillation of both.</p>
+      <h2>Version from day one</h2>
+      <p>The most common mistake I see is treating versioning as a "we'll do that later" problem. There is no later. The moment your API has a consumer — even an internal one — you've made a contract. Breaking that contract has a cost, and the cost always lands at the worst possible moment.</p>
+      <h2>Error messages are a user interface</h2>
+      <p>Your API's errors are read by humans — usually tired, frustrated humans at 2am. "Internal server error" is not helpful. The specific field that failed validation, the reason it failed, and ideally what a valid value looks like — that's helpful. Invest in your errors the same way you invest in your happy path.</p>
+      <h2>Observability is not optional</h2>
+      <p>You cannot debug what you cannot see. Before you ship anything, ask: if this breaks in production, will I know? Will I know which request caused it? Which customer? Which data state triggered it? Logging, tracing, and alerting aren't extras — they're the thing that turns a 4am incident into a 20-minute fix instead of a 4-hour war room.</p>
+      <p>The boring stuff is what keeps the lights on. Design for the failure, not just the feature.</p>
+    `
+  },
+  {
+    id: 'post3',
+    tag: 'career',
+    tagLabel: 'Career',
+    date: 'January 2025',
+    readTime: '7 min read',
+    title: 'Going from intern to senior engineer — the parts that actually mattered',
+    preview: 'A candid look at the 5 years between "funded prototype" and "federal senior engineer" — and what actually moved the needle.',
+    body: `
+      <p>In the summer of 2019, I built a prototype at ADP that got funded. In early 2026, I became a senior engineer at IBM. Here's what actually happened in between — not the resume version.</p>
+      <h2>Learning to be useful before being impressive</h2>
+      <p>Early on, I spent a lot of energy trying to write clever code. The kind that uses every language feature and makes you feel smart. What actually got me noticed was writing code that my teammates didn't have to ask me about. Clear names, obvious structure, useful comments. Boring code that works is a superpower.</p>
+      <h2>The career jump that felt like a step sideways</h2>
+      <p>Moving from ADP to federal contracting at IBM felt lateral at the time. Same title, different industry, different stack. What I didn't realize was that I was stepping into an environment where the stakes were genuinely high — real government data, real compliance requirements, real consequences if something breaks. That context made me a much more careful engineer.</p>
+      <h2>What "senior" actually means</h2>
+      <p>It's not about knowing everything. It's about knowing how to figure out what you don't know — and being willing to say "I don't know, but here's how I'll find out." The most senior engineers I've worked with are also the most comfortable with uncertainty. That's not a coincidence.</p>
+      <p>You get there slower than you want, and then one day you look back and it doesn't seem slow at all.</p>
+    `
+  }
+];
+
+const TAG_CLASS = { tech: 'tag-tech', mental: 'tag-mental', career: 'tag-career', education: 'tag-education' };
+const PILL_ACTIVE = { all: 'active-all', tech: 'active-tech', mental: 'active-mental', career: 'active-career', education: 'active-education' };
+
+let currentFilter = 'all';
+let currentSearch = '';
+let openPostId = null;
+
+function getFilteredPosts() {
+  return POSTS.filter(p => {
+    const matchesFilter = currentFilter === 'all' || p.tag === currentFilter;
+    const q = currentSearch.toLowerCase();
+    const matchesSearch = !q || p.title.toLowerCase().includes(q) || p.preview.toLowerCase().includes(q) || p.tagLabel.toLowerCase().includes(q);
+    return matchesFilter && matchesSearch;
+  });
+}
+
+function renderPosts() {
+  const layout = document.getElementById('posts-layout');
+  const posts = getFilteredPosts();
+  const countEl = document.getElementById('post-count');
+
+  countEl.textContent = posts.length === 1 ? '1 post' : `${posts.length} posts`;
+
+  if (posts.length === 0) {
+    layout.innerHTML = `<div class="empty-state"><span class="empty-icon">✍️</span><p>No posts match that search.<br>Try a different term or filter.</p></div>`;
+    return;
+  }
+
+  layout.innerHTML = posts.map(p => {
+    const isOpen = openPostId === p.id;
+    return `
+      <article class="post-card${isOpen ? ' open' : ''}" id="card-${p.id}" onclick="togglePost('${p.id}')">
+        <div class="post-card-header">
+          <div class="post-card-header-row">
+            <span class="blog-tag ${TAG_CLASS[p.tag]}">${p.tagLabel}</span>
+            <div class="expand-icon" aria-label="${isOpen ? 'Collapse' : 'Expand'} post">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <h2>${p.title}</h2>
+          <p class="post-card-preview">${p.preview}</p>
+          <div class="post-card-meta">${p.date} · ${p.readTime}</div>
+        </div>
+        <div class="post-body-wrap">
+          <div class="post-body">${p.body}</div>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+function togglePost(id) {
+  if (openPostId === id) {
+    openPostId = null;
+  } else {
+    openPostId = id;
+  }
+  renderPosts();
+  if (openPostId) {
+    setTimeout(() => {
+      const card = document.getElementById('card-' + openPostId);
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  }
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.pill').forEach(p => {
+    const f = p.dataset.filter;
+    p.className = 'pill';
+    if (f === filter) p.classList.add(PILL_ACTIVE[f]);
+  });
+  renderPosts();
+}
+
+document.querySelectorAll('.pill').forEach(btn => {
+  btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+});
+
+document.getElementById('search-input').addEventListener('input', e => {
+  currentSearch = e.target.value;
+  renderPosts();
+});
+
+// Deep link: ?post=post2
+function handleDeepLink() {
+  const params = new URLSearchParams(window.location.search);
+  const postParam = params.get('post');
+  if (postParam && POSTS.find(p => p.id === postParam)) {
+    openPostId = postParam;
+  }
+}
+
+handleDeepLink();
+renderPosts();
+</script>
+</body>
+</html>
