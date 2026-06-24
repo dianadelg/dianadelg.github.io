@@ -39,7 +39,6 @@
     min-height: 100vh;
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -66,7 +65,6 @@
   .nav-links a:hover { color: var(--accent); }
   .nav-links a.active { color: var(--accent); }
 
-  /* PAGE HEADER */
   .page-header {
     padding: 9rem 2.5rem 3rem;
     max-width: 1100px;
@@ -96,7 +94,6 @@
     line-height: 1.8;
   }
 
-  /* CONTROLS */
   .controls {
     max-width: 1100px;
     margin: 0 auto;
@@ -169,18 +166,15 @@
     white-space: nowrap;
   }
 
-  /* POSTS LAYOUT */
   .posts-layout {
-    max-width: 1100px;
+    max-width: 780px;
     margin: 0 auto;
     padding: 3rem 2.5rem 6rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    max-width: 780px;
   }
 
-  /* POST CARD */
   .post-card {
     background: white;
     border: 1px solid var(--border);
@@ -241,7 +235,6 @@
   }
   .post-card-meta { font-size: 0.75rem; color: var(--ink-faint); }
 
-  /* POST BODY (expandable) */
   .post-body-wrap {
     max-height: 0;
     overflow: hidden;
@@ -270,7 +263,6 @@
     letter-spacing: -0.01em;
   }
 
-  /* VIDEO EMBED */
   .post-video {
     margin: 1.5rem 0;
     border-radius: 12px;
@@ -294,7 +286,6 @@
     margin-bottom: 1.25rem;
   }
 
-  /* EMPTY STATE */
   .empty-state {
     grid-column: 1 / -1;
     text-align: center;
@@ -304,7 +295,6 @@
   .empty-state .empty-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
   .empty-state p { font-size: 0.9rem; line-height: 1.7; }
 
-  /* FOOTER */
   footer {
     text-align: center;
     padding: 2rem;
@@ -313,7 +303,6 @@
     border-top: 1px solid var(--border);
   }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.25rem; }
     .nav-links { gap: 1.25rem; }
@@ -346,7 +335,7 @@
 <div class="controls">
   <div class="search-wrap">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" class="search-input" id="search-input" placeholder="Search posts…" autocomplete="off">
+    <input type="text" class="search-input" id="search-input" placeholder="Search posts\u2026" autocomplete="off">
   </div>
 
   <div class="filter-pills">
@@ -365,7 +354,7 @@
 </div>
 
 <footer>
-  Made with care by Diana Del Gaudio · 2025 · <a href="index.html" style="color:var(--accent); text-decoration:none;">← Back home</a>
+  Made with care by Diana Del Gaudio \u00b7 2025 \u00b7 <a href="index.html" style="color:var(--accent); text-decoration:none;">\u2190 Back home</a>
 </footer>
 
 <script>
@@ -376,8 +365,8 @@ const POSTS = [
     tagLabel: 'Mental health',
     date: 'June 2026',
     readTime: '5 min read',
-    title: 'When your brain won\'t let you ship: OCD and software engineering',
-    preview: 'My compulsions followed me into my career. Here\'s what that actually looked like and what helped.',
+    title: "When your brain won't let you ship: OCD and software engineering",
+    preview: "My compulsions followed me into my career. Here's what that actually looked like and what helped.",
     body: `
       <p>My compulsions stem from an innate need to feel perfect. To get things <em>just right.</em> That part of OCD that is impossible to satisfy: the chasing of certainty, the perfectionism that has no finish line. It followed me into my software engineering career, and at some point, it felt like a switch was flipped.</p>
       <h2>Before</h2>
@@ -399,46 +388,47 @@ const POSTS = [
     tagLabel: 'Education',
     date: 'June 2026',
     readTime: '6 min read',
-    title: 'Reachy Mini Day 0',
+    title: 'Reachy Mini - Day 0',
     preview: 'Starting from zero on robotics. No background, no robot yet, just a simulation and a lot of questions.',
     body: `
-      <p>One of the coolest things about <a href="https://huggingface.co/reachy-mini" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">Reachy Mini</a> — an adorable lil open-source robot that can talk, move, and even dance — is that you can actually play with it without having a physical Reachy in front of you.</p>
+      <p>One of the coolest things about <a href="https://huggingface.co/reachy-mini" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">Reachy Mini</a> (aside from it being an adorable lil open-source robot that can talk, move, and even dance) is the fact that you can actually play with it without having a physical Reachy in front of you.</p>
 
-      <p>While I anxiously await for my robot — which I've lovingly named Babymax for the obvious resemblance to the Big Hero 6 character, we'll get into that — to make its way to Arlington, Virginia, I've been doing some research and found that I can run a simulation and interact with the robot in there, playing around with Python.</p>
+      <p>While I anxiously await for my robot \u2013 which I've lovingly named Babymax for the obvious resemblance to the Big Hero 6 character, more on that later \u2013 to make its way to Arlington, Virginia, I've been doing some research and found that I can run a simulation and interact with the robot in there, playing around with Python.</p>
 
       <p>Pretty neat, huh?</p>
 
-      <p>Currently, the code to make the robot do ANYTHING is high level. I can't actually rotate a head, turn on a camera, or play a sound. Enter the daemon (The Vampire Diaries, anyone?) Let's break some things down, as someone with zero robotics background.</p>
+      <p>Currently, the code to make the robot do ANYTHING is high level. Easier for me, since the code hides all of the complexity like inverse kinematics (what?!), I can focus on building intelligence. I can make Babymax dance without having to manually rotate every single motor one by one. But, if I ever need to get under the hood, the system is flexible enough to let me talk to the motors and sensors directly through the daemon (The Vampire Diaries, anyone?) Let's break some things down, as someone with zero robotics background.</p>
 
       <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin: 1rem 0 1rem 0.5rem;">
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span><strong style="color:var(--ink);">The Daemon</strong> — the "middleman" or translator. A background service that runs continuously. It talks to the physical hardware or, in my case, the simulation on one side and exposes an API (talking to the Python script) on the other.</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span><strong style="color:var(--ink);">MuJoCo</strong> — the physics engine. Think of it as the simulation's understanding of gravity, weight, and how things move. I'll dig into this one properly in a future post.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span><strong style="color:var(--ink);">The Daemon</strong> \u2013 the "middleman" or translator. A background service that runs continuously. It takes to the physical hardware or, in my case, the simulation on one side and exposes an API (talking to the Python script) on another.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span><strong style="color:var(--ink);">MuJoCo</strong> \u2013 the physics engine. It simulates the real world inside of my computer, calculating gravity, friction, collision, and momentum. Pretty important stuff. When my high-level code sends a command to move, MuJoCo calculates exactly what that move would look like in a 3D space.</li>
       </ul>
 
-      <p>When I run <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">reachy-mini-daemon --sim</code> — that command starts the daemon in simulation mode, telling it to connect to the virtual robot instead of a physical one — I'm basically telling the computer to ignore the real robot and pretend it's connected to the virtual robot inside the physics engine. The daemon keeps the simulation running, it waits for my commands, and we can get the virtual robot to interact!</p>
+      <p>When I run a command like <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">reachy-mini-daemon --sim</code> (more on this later \u2014 this starts the daemon in simulation mode, telling it to connect to the virtual robot instead of a physical one), I'm basically telling the computer to ignore the real robot and pretend its connected to the virtual robot inside the physics engine. The daemon keeps the simulation running, it waits for my commands, and we can get the virtual robot to interact!</p>
 
       <h2>What does this mean for the real Reachy?</h2>
 
-      <p>When I get the real robot, because we can run with the daemon, my code doesn't change at all. In the simulation, I run the daemon with the <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">--sim</code> flag (that's the part that says "use the virtual robot"), tell it to "move head left" and the physics engine gets updated via the daemon. Then when I get the real robot, I plug it into my computer's USB port, run the daemon without <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">--sim</code>, and when my code says "move head left", the daemon sends actual electrical signals to the physical motors in the robot's neck.</p>
+      <p>When I get the real robot, because we can run with the daemon, my code doesn't change at all.</p>
+      <p>In the simulation, I run the daemon with <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">--sim</code> (that's the part that says "use the virtual robot"), tell it to "move head left" and the physics engine gets updated via the Daemon.</p>
+      <p>Then when I get the real robot, I plug it into my computer's USB port, I run the daemon without the <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">--sim</code> flag, and when my code says "move head left", the daemon sends actual electrical signals to the physical motors in the robot's neck.</p>
 
-      <p>TL;DR: because the SDK talks to the daemon, not the hardware directly, I can write all of my code in the simulation and then just plug in Babymax when the time comes without rewriting a single line of code.</p>
+      <p><strong style="color:var(--ink);">TL;DR:</strong> Because the SDK talks to the daemon, not the hardware directly, I can write all of my code in the simulation and then just plug in Babymax when the time comes without rewriting a single line of code.</p>
 
       <p>I created a document to set up the simulation here: <a href="https://github.com/dianadelg/roboticsReachyMini/blob/main/Reachy%20Mini%20Install%20Instructions%20-%20Windows.pdf" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">Reachy Mini Install Instructions (Windows)</a>.</p>
-
       <p>While I was trying to set this up, I ran into a few things, and I figured it's important to share this process with anyone else who's new.</p>
 
       <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin: 1rem 0 1rem 0.5rem;">
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>I had an old version of Python. Had to update to something between 3.10 and 3.13 (the official docs recommend 3.12 specifically).</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>I needed to install WSL — Windows Subsystem for Linux — which provides a Linux environment where the robot's software expects to live, preventing crashes caused by missing Unix files. Initially I tried to install everything on my local and…yeah. I needed a dedicated virtual environment, so dependencies didn't conflict. I don't really know what was going on but it was a lot and scary and super intimidating for someone new to this.</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>Make sure you install both the daemon AND the SDK. For simulation specifically, you'll want <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">pip install "reachy-mini[mujoco]"</code> — <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">pip install</code> is how you tell Python to download and install a package, and the <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">[mujoco]</code> part is an "extra" that also pulls in the physics engine bindings you need for the simulation to run.</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>Before I tried to execute any Python commands, I had to make sure the simulation was already running by starting the daemon first with <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">reachy-mini-daemon --sim</code>. This launches the daemon in simulation mode and opens the 3D viewer window — without this running first, your Python script has nothing to talk to. Seems obvious now but I wasn't sure how things connected at first and this was clearly a missing piece. I think I started with the method of "hey let's get something to run first." Would've saved me some time!</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>The repository for Reachy states that it's supported and tested on Linux and macOS. Windows, not so much. We need that MuJoCo engine to run our code, but Windows makes this funky (GPU drivers, display context…things get wonky.) At one point, I was trying to bypass this using a Docker image and running the simulator in Docker, but it is not public. Enter WSL (Linux inside Windows). Required me to download Ubuntu and run the simulator that way, install Reachy and the simulator dependencies in there. Also make sure your packages are updated — in Ubuntu you can do that with <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">sudo apt update && sudo apt upgrade</code>, which just checks for and installs any pending system updates.</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>The dependencies were also funky. I ended up having to remove and reinstall things a few times (thanks to GPT for helping me troubleshoot.)</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>Make sure you're installing the correct Reachy simulator. There are versions out there.</li>
-        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">—</span>Make sure your Reachy environment is configured correctly. We need an isolated virtual environment to install the Reachy SDK — this is basically a contained little bubble for Python so the packages you install for Reachy don't collide with packages you have installed for other projects.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>I had an old version of python. Had to update to something between 3.10 and 3.13 (the official docs recommend 3.12 specifically).</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>I needed to install the WSL (Windows Subsystem for Linux) \u2013 which provides a linux environment where the robot's software expects to live, preventing crashes caused by missing unix files. Initially I tried to install everything on my local and\u2026yeah. I needed a dedicated virtual environment, so dependencies didn't conflict. I don't really know what was going on but it was a lot and scary and super intimidating for someone new to this.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>Make sure I installed both the daemon AND the sdk. For simulation specifically, you'll want <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">pip install "reachy-mini[mujoco]"</code> \u2014 <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">pip install</code> is how you tell Python to download and install a package, and the <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">[mujoco]</code> part is an "extra" that also pulls in the physics engine bindings you need for the simulation to run.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>Before I tried to execute any python commands, I had to make sure the simulation was running <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">reachy-mini-daemon --sim</code>. This launches the daemon in simulation mode and opens the 3D viewer window \u2014 without this running first, your Python script has nothing to talk to. Seems obvious now but I wasn't sure how things connected at first and this was clearly a missing piece. I think I started with the method of "hey let's get something to run first." Would've saved me some time!</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>The repository for Reachy states that it's supported and tested on Linux and macOS. Windows, not so much. We need that MuJoCo engine to run our code, but windows makes this funky (GPU drivers, display context\u2026things get wonky.) At one point, I was trying to bypass this using a docker image and running the simulator in Docker, but it is not public. Enter WSL (Linux inside windows). Required me to download Ubuntu and run the simulator that way, install Reachy and the simulator dependencies in there. Also make sure your packages are updated \u2014 in Ubuntu you can do that with <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">sudo apt update && sudo apt upgrade</code>, which just checks for and installs any pending system updates.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>The dependencies were also funky. I ended up having to remove and reinstall things a few times (thanks to GPT for helping me troubleshoot.)</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>Make sure you're installing the correct Reachy simulator. There are versions out there.</li>
+        <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>Make sure your Reachy environment is configured correctly. We need an isolated environment to install the Reachy SDK \u2014 this is basically a contained little bubble for Python so the packages you install for Reachy don't collide with packages you have installed for other projects.</li>
       </ul>
 
-      <p>Well that was a journey, but we got there. My first crack at this whole robotics thing, and it was interesting (and frustrating, but no one said this would be easy). I'm eager and excited to continue while I patiently wait for Babymax to make his way into the world 🤖</p>
+      <p>Well that was a journey, but we got there. My first crack and this whole robotics thing, and it was interesting (and frustrating, but no one said this would be easy). I'm eager and excited to continue while I patiently wait for Babymax to make his way into the world.</p>
     `
   }
 ];
@@ -467,7 +457,7 @@ function renderPosts() {
   countEl.textContent = posts.length === 1 ? '1 post' : `${posts.length} posts`;
 
   if (posts.length === 0) {
-    layout.innerHTML = `<div class="empty-state"><span class="empty-icon">✍️</span><p>No posts match that search.<br>Try a different term or filter.</p></div>`;
+    layout.innerHTML = `<div class="empty-state"><span class="empty-icon">\u270d\ufe0f</span><p>No posts match that search.<br>Try a different term or filter.</p></div>`;
     return;
   }
 
@@ -484,10 +474,10 @@ function renderPosts() {
           </div>
           <h2>${p.title}</h2>
           <p class="post-card-preview">${p.preview}</p>
-          <div class="post-card-meta">${p.date} · ${p.readTime}</div>
+          <div class="post-card-meta">${p.date} \u00b7 ${p.readTime}</div>
         </div>
         <div class="post-body-wrap">
-          <div class="post-body">${p.body}</div>
+          <div class="post-body">${p.body}${p.video ? `<div class="post-video"><iframe src="${p.video}" allowfullscreen loading="lazy"></iframe></div><p class="post-video-caption">${p.videoCaption || ''}</p>` : ''}</div>
         </div>
       </article>
     `;
@@ -528,7 +518,6 @@ document.getElementById('search-input').addEventListener('input', e => {
   renderPosts();
 });
 
-// Deep link: ?post=post2
 function handleDeepLink() {
   const params = new URLSearchParams(window.location.search);
   const postParam = params.get('post');
