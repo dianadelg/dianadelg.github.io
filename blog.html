@@ -354,7 +354,7 @@
 </div>
 
 <footer>
-  Made with care by Diana Del Gaudio \u00b7 2025 \u00b7 <a href="index.html" style="color:var(--accent); text-decoration:none;">\u2190 Back home</a>
+  Made with care by Diana Del Gaudio · 2025 · <a href="index.html" style="color:var(--accent); text-decoration:none;">← Back home</a>
 </footer>
 
 <script>
@@ -365,7 +365,7 @@ const POSTS = [
     tagLabel: 'Mental health',
     date: 'June 2026',
     readTime: '5 min read',
-    title: "When your brain won't let you ship: OCD and SWE",
+    title: "When your brain won't let you ship: OCD and software engineering",
     preview: "My compulsions followed me into my career. Here's what that actually looked like and what helped.",
     body: `
       <p>My compulsions stem from an innate need to feel perfect. To get things <em>just right.</em> That part of OCD that is impossible to satisfy: the chasing of certainty, the perfectionism that has no finish line. It followed me into my software engineering career, and at some point, it felt like a switch was flipped.</p>
@@ -391,7 +391,7 @@ const POSTS = [
     title: 'Reachy Mini - Day 0',
     preview: 'Starting from zero on robotics. No background, no robot yet, just a simulation and a lot of questions.',
     body: `
-      <p>One of the coolest things about <a href="https://huggingface.co/reachy-mini" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">Reachy Mini</a> (aside from it being an adorable lil open-source robot that can talk, move, and even dance) is the fact that you can actually play with it without having a physical Reachy in front of you.</p>
+      <p>One of the coolest things about <a href="https://huggingface.co/reachy-mini" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">Reachy Mini</a> (aside from the fact that it's an adorable lil open-source robot that can talk, move, and even dance) is the fact that you can actually play with it without having a physical Reachy in front of you.</p>
 
       <p>While I anxiously await for my robot \u2013 which I've lovingly named Babymax for the obvious resemblance to the Big Hero 6 character, more on that later \u2013 to make its way to Arlington, Virginia, I've been doing some research and found that I can run a simulation and interact with the robot in there, playing around with Python.</p>
 
@@ -412,7 +412,7 @@ const POSTS = [
       <p>In the simulation, I run the daemon with <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">--sim</code> (that's the part that says "use the virtual robot"), tell it to "move head left" and the physics engine gets updated via the Daemon.</p>
       <p>Then when I get the real robot, I plug it into my computer's USB port, I run the daemon without the <code style="font-size:0.875rem; background:rgba(26,25,23,0.06); padding:0.15rem 0.4rem; border-radius:4px;">--sim</code> flag, and when my code says "move head left", the daemon sends actual electrical signals to the physical motors in the robot's neck.</p>
 
-      <p><strong style="color:var(--ink);">TL;DR:</strong> Because the SDK talks to the daemon, not the hardware directly, I can write all of my code in the simulation and then just plug in Babymax when the time comes without rewriting a single line of code.</p>
+      <p>TL;DR: because the SDK talks to the daemon, not the hardware directly, I can write all of my code in the simulation and then just plug in Babymax when the time comes without rewriting a single line of code.</p>
 
       <p>I created a document to set up the simulation here: <a href="https://github.com/dianadelg/roboticsReachyMini/blob/main/Reachy%20Mini%20Install%20Instructions%20-%20Windows.pdf" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">Reachy Mini Install Instructions (Windows)</a>.</p>
       <p>While I was trying to set this up, I ran into a few things, and I figured it's important to share this process with anyone else who's new.</p>
@@ -428,7 +428,31 @@ const POSTS = [
         <li style="padding-left:1rem; position:relative; font-size:0.975rem; color:var(--ink-muted); line-height:1.75;"><span style="position:absolute;left:0;color:var(--ink-faint);">\u2014</span>Make sure your Reachy environment is configured correctly. We need an isolated environment to install the Reachy SDK \u2014 this is basically a contained little bubble for Python so the packages you install for Reachy don't collide with packages you have installed for other projects.</li>
       </ul>
 
-      <p>Well that was a journey, but we got there. My first crack and this whole robotics thing, and it was interesting (and frustrating, but no one said this would be easy). I'm eager and excited to continue while I patiently wait for Babymax to make his way into the world.</p>
+      <p>Well that was a journey, but we got there. My first crack and this whole robotics thing, and it was interesting (and frustrating, but no one said this would be easy). I'm eager and excited to continue while I patiently wait for Babymax to make his way into the world \U0001f916</p>
+    `
+  }
+,
+  {
+    id: 'post5',
+    tag: 'career',
+    tagLabel: 'Career',
+    date: 'June 2026',
+    readTime: '2 min read',
+    title: 'ADITL: SWE @ IBM',
+    preview: 'A Day in the Life feature on IBM Careers — a look at life as a software engineer in the DC office and the community I found along the way.',
+    body: `
+      <p>Super thrilled to showcase my time being featured on IBM Career's A Day in the Life, where I showed everyone around the DC office!</p>
+
+      <p>Some cool things while at IBM: at the time, I was co-running DC LEAD's Community Service branch, which aimed to give associates the opportunity to engage in meaningful giveback to the DMV area. I was also co-running our first Diversity and Inclusion Book Club, working with the broader Community Engagement chapter at IBM and Generative AI Guides, and involved in mentorship for new associates.</p>
+
+      <p>I was a busy bee, which I guess is apt given IBM's Rebus logo 👁️🐝Ⓜ️</p>
+
+      <p>I'm so blessed to be at a company that fosters my technical growth, but also a supportive community, the opportunity to make an impact beyond myself, and the chance to connect with so many likeminded people.</p>
+
+      <a href="https://www.youtube.com/shorts/F1Rn7QPX-G4" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; margin-top:0.5rem; padding:0.65rem 1.25rem; background:#FF0000; color:white; border-radius:100px; font-size:0.875rem; font-weight:500; text-decoration:none; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FF0000"/></svg>
+        Watch on YouTube
+      </a>
     `
   }
 ];
