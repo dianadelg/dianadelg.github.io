@@ -335,13 +335,13 @@
 <div class="controls">
   <div class="search-wrap">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" class="search-input" id="search-input" placeholder="Search posts\u2026" autocomplete="off">
+    <input type="text" class="search-input" id="search-input" placeholder="Search posts..." autocomplete="off">
   </div>
 
   <div class="filter-pills">
     <button class="pill active-all" data-filter="all">All</button>
     <button class="pill" data-filter="tech">Tech</button>
-    <button class="pill" data-filter="mental">Mental health</button>
+    <button class="pill" data-filter="mental">Mental Health</button>
     <button class="pill" data-filter="career">Career</button>
     <button class="pill" data-filter="education">Education</button>
   </div>
@@ -360,6 +360,24 @@
 <script>
 const POSTS = [
   {
+    id: 'post4',
+    tag: 'mental',
+    tagLabel: 'Mental health',
+    date: 'July 2026',
+    readTime: '2 min read',
+    title: 'OCD: Learning to Swim',
+    preview: 'My piece on OCD was published on To Write Love on Her Arms: On drowning, intrusive thoughts, and trying so hard to swim.',
+    body: `
+      <p>I'm so incredibly excited to announce my piece about OCD has been published on To Write Love On Her Arms' blog! OCD is still so misunderstood and I wrote this when I was really struggling with my intrusive thoughts during a period where I "should've" been fine, likening the experience to drowning in an ocean when I'm trying so hard to swim (and ultimately, exhausting myself in the process.) It was also the first time I publically acknowledged my experience since my diagnosis, and the feedback has been overwhelmingly positive. I feel like this is one small step towards breaking the stigma and shedding light on what a debilitating disorder it is.</p>
+ 
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1.25rem;">
+        <a href="https://twloha.com/blog/ocd-learning-to-swim/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.65rem 1.25rem; background:var(--ink); color:var(--cream); border-radius:100px; font-size:0.875rem; font-weight:500; text-decoration:none; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Read the piece on TWLOHA →</a>
+        <a href="https://www.instagram.com/p/DVrH3lwj6Xa/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.65rem 1.25rem; background:white; color:var(--ink); border:1.5px solid var(--border); border-radius:100px; font-size:0.875rem; font-weight:500; text-decoration:none; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">View the graphic on Instagram ↗</a>
+      </div>
+
+            <p style="margin-top:1.5rem; font-size:0.875rem; color:var(--ink-faint); line-height:1.8;"><i>If you or someone you know is in crisis or having thoughts of suicide, help is available. Please reach out to the 988 Suicide & Crisis Lifeline by calling or texting <a href="https://988lifeline.org" target="_blank" rel="noopener" style="color:var(--ink-muted); text-decoration:underline;"><b>988</b></a> or chatting via <a href="https://988lifeline.org" target="_blank" rel="noopener" style="color:var(--ink-muted); text-decoration:underline;">988lifeline.org</a>. Support is confidential, free, and available 24/7.</i></p>
+    `
+  },{
     id: 'post3',
     tag: 'mental',
     tagLabel: 'Mental health',
@@ -390,7 +408,7 @@ const POSTS = [
     date: 'June 2026',
     readTime: '2 min read',
     title: 'ADITL: SWE @ IBM',
-    preview: 'A Day in the Life feature on IBM Careers — a look at life as a software engineer in the DC office and the community I found along the way.',
+    preview: 'A Day in the Life feature on IBM Careers: a look at life as a software engineer in the DC office and the community I found along the way.',
     body: `
       <p>Super thrilled to showcase my time being featured on IBM Career's A Day in the Life, where I showed everyone around the DC office!</p>
 
